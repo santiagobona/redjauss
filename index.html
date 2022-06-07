@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./estilos/estilos.css">
     <title>redjauss</title>
 </head>
@@ -21,6 +22,7 @@
             </li>
             <li> <a href="./secciones/tienda.html" class="tienda">tienda</a>
             </li>
+        </ul>
         </nav>
     </header>
     <main> 
@@ -28,12 +30,18 @@
         </h1>
     <figure> 
         <section id="galeria">
-        <img src="./img/img1.png" alt="img1">
-        <img src="./img/img2.png" alt="img2">
-        <img src="./img/img3.png" alt="img3">
-        <img src="./img/img4.png" alt="img4">
+        <div><img src="./img/img1.png" alt="img1" data-aos="zoom-in">
+        </div>
+        <div><img src="./img/img2.png" alt="img2" data-aos="zoom-in">
+        </div>
+        <div><img src="./img/img3.png" alt="img3" data-aos="zoom-in">
+        </div>
+        <div><img src="./img/img4.png" alt="img4" data-aos="zoom-in">
+        </div>
       </section>
-        <figcaption>presentacion redjauss</figcaption>
+        <figcaption data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">presentacion redjauss </figcaption>
      
     </figure>
     </main>
@@ -42,5 +50,9 @@
    </figure>
    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, sapiente, doloremque eaque omnis quos cumque eligendi possimus voluptatibus distinctio esse cupiditate commodi, debitis est necessitatibus placeat laborum aut labore similique?</p>
 </footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
 </body>
 </html>
