@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=PT+Sans+Narrow&family=Roboto+Flex:opsz,wght@8..144,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=PT+Sans+Narrow&family=Roboto+Flex:opsz,wght@8..144,200&display=swap");
 html {
   font-size: 62.5%;
 }
@@ -53,8 +54,8 @@ h1 {
 }
 
 #galeria img {
-  width: 90%;
-  height: 60%;
+  width: 70%;
+  height: 50%;
   -webkit-box-shadow: 0px 0px 10px red;
           box-shadow: 0px 0px 10px red;
   border-radius: 10px;
@@ -145,8 +146,8 @@ ul {
   list-style: none;
 }
 
-a {
-  font-size: 30px;
+ul a {
+  font-size: 40px;
   color: black;
   text-decoration: none;
 }

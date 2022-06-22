@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=PT+Sans+Narrow&family=Roboto+Flex:opsz,wght@8..144,200&display=swap');
 *{
     padding: 0%;
     margin: 0%;
@@ -24,10 +25,11 @@ ul{
     justify-content: space-around;
     flex-wrap: wrap;
     list-style: none;
+    a{
+        font-size: 40px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+    }
+}
 
-}
-a{
-    font-size: 30px;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-}
+
