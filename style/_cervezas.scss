@@ -1,0 +1,97 @@
+.box_uno{
+    background-color: $primary-color;
+    width: $ancho/2;
+    height: 40px;
+}
+.box_dos{
+    font-size: large;
+    color: $black-color;
+    background-color: gray;
+    width: ($ancho/2)-50px;
+}
+p{
+    @if $tipografia == verde{
+        color:blue;
+    } 
+    @else if $tipografia == celeste{
+        color:red;
+    }
+    @else {
+        color:black;
+    }
+
+}
+.contenido_tres{
+    @if $mostrar{
+        border: 2px dashed red;
+    }
+}
+
+/*bucle*/
+
+
+@for $i from 1 through 4{
+    .botellas-#{$i}{
+        background-color: darkgreen;
+        color: white;
+        width:200px*$i;
+    }
+}
+
+/*each*/
+
+
+@each $beer in beer1, beer2, beer3{
+    .#{$beer}-fondo{
+        width:$dimension*2;
+        height: $dimension;
+        background-image: 
+        url('../img/#{$beer}.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border:4px solid crimson;
+    }
+}
+
+/*mapas*/
+$redes: ( 
+       twitter: #9ebacf, 
+       facebook:#68738b,
+       instagram:#5f260c,
+);
+@each $red, $color in $redes {
+    .btn--#{$red}{
+        background-color: $color;
+    }
+}
+
+/*Extend*/
+.redSocial{
+    border:2px solid red;
+    background-color: gold;
+}
+
+.redsocial--social{
+    @extend .redSocial;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:white;
+    border-radius: 5px;
+}
+.redsocial--nueva{
+    @extend .redSocial;
+    font-size: 30px;
+    color:green;
+    border:3px dashed blue;
+}
+
+/*mixin*/
+@mixin sizes ($height, $width){
+    height: $height;
+    width: $width;
+}
+
+.mis_sabores{
+    @include sizes (50px,50px);
+    background-color: lightcoral;
+}
