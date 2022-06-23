@@ -112,16 +112,6 @@ figcaption {
   margin: 0%;
 }
 
-header {
-  display: -ms-grid;
-  display: grid;
-  width: 100%;
-  height: 100%;
-  padding: 0%;
-  margin: 0%;
-  background-color: #646464;
-}
-
 nav ul li {
   display: inline-block;
   font-family: 'Lato', sans-serif;
