@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=PT+Sans+Narrow&family=Roboto+Flex:opsz,wght@8..144,200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=PT+Sans+Narrow&family=Roboto+Flex:opsz,wght@8..144,200&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -11,8 +16,8 @@ body {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr 30fr auto;
-      grid-template-rows: 1fr 30fr auto;
+  -ms-grid-rows: 1fr 10fr 2fr;
+      grid-template-rows: 1fr 10fr 2fr;
       grid-template-areas: "header" "main" "footer";
 }
 
@@ -34,13 +39,20 @@ main {
           flex-direction: column;
 }
 
-h1 {
+#etiqueta {
   font-size: 60px;
   color: black;
   padding: 80px;
-  margin: 80px 40px 80px 40px;
+  margin: 40px;
+  padding: 40px;
+  width: 1fr;
+  height: 1fr;
   border: solid black;
   background-color: #6b4747;
+}
+
+figure {
+  margin: 40px;
 }
 
 #galeria {
@@ -66,15 +78,21 @@ h1 {
   margin-top: 50px;
 }
 
-h2 {
-  margin-top: 900px;
-  text-align: center;
-  font-size: 40px;
-}
-
 figcaption {
   margin-top: 1000px;
   font-size: 100px;
+}
+
+footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  width: 100%;
+  background-color: #646464;
+}
+
+.logo {
+  margin-top: 30px;
 }
 
 #redes {
@@ -101,10 +119,6 @@ figcaption {
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas: "img1" "img2" "img3"  "img4";
   }
-}
-
-.slide {
-  margin-top: 10px;
 }
 
 * {
@@ -152,139 +166,93 @@ ul a {
   text-decoration: none;
 }
 
-.box_uno {
-  background-color: red;
-  width: 200px;
-  height: 40px;
-}
-
-.box_dos {
-  font-size: large;
-  color: black;
-  background-color: gray;
-  width: 150px;
-}
-
-p {
+.entry-tittle {
+  font-size: 50px;
+  text-align: center;
+  margin: 40px;
   color: black;
 }
 
-.contenido_tres {
-  border: 2px dashed red;
+#card {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  gap: 40px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: "ipa negra" "roja rubia";
 }
 
-/*bucle*/
-.botellas-1 {
-  background-color: darkgreen;
-  color: white;
-  width: 200px;
-}
-
-.botellas-2 {
-  background-color: darkgreen;
-  color: white;
-  width: 400px;
-}
-
-.botellas-3 {
-  background-color: darkgreen;
-  color: white;
-  width: 600px;
-}
-
-.botellas-4 {
-  background-color: darkgreen;
-  color: white;
-  width: 800px;
-}
-
-/*each*/
-.beer1-fondo {
-  width: 400px;
-  height: 200px;
-  background-image: url("../img/beer1.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border: 4px solid crimson;
-}
-
-.beer2-fondo {
-  width: 400px;
-  height: 200px;
-  background-image: url("../img/beer2.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border: 4px solid crimson;
-}
-
-.beer3-fondo {
-  width: 400px;
-  height: 200px;
-  background-image: url("../img/beer3.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border: 4px solid crimson;
-}
-
-/*mapas*/
-.btn--twitter {
-  background-color: #9ebacf;
-}
-
-.btn--facebook {
-  background-color: #68738b;
-}
-
-.btn--instagram {
-  background-color: #5f260c;
-}
-
-/*Extend*/
-.redSocial, .redsocial--social, .redsocial--nueva {
-  border: 2px solid red;
-  background-color: gold;
-}
-
-.redsocial--social {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: white;
-  border-radius: 5px;
-}
-
-.redsocial--nueva {
-  font-size: 30px;
-  color: green;
-  border: 3px dashed blue;
-}
-
-/*mixin*/
-.mis_sabores {
-  height: 50px;
-  width: 50px;
-  background-color: lightcoral;
-}
-
-* {
-  margin: 0%;
-  padding: 0%;
-}
-
-footer {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: footer;
-  width: 100%;
+.card {
   background-color: #646464;
+  border-radius: 0.3rem;
+}
+
+.btn-primary {
+  color: black;
+  background-color: #068822;
+  border-color: black;
+}
+
+.history {
+  font-size: 50px;
+  text-align: center;
+  margin: 40px;
+  color: black;
+}
+
+.historia-andes {
+  font-size: 35px;
+}
+
+#grilla {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  gap: 40px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: "andes cerveceria historia-andes" "hotel andes historia-andes";
+}
+
+.tituloc {
+  font-size: 50px;
+  text-align: center;
+}
+
+.subtituloc {
+  text-align: center;
+  font-size: 30px;
+}
+
+#estilosCervezas {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  gap: 40px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: "imgipa imgnegra" "imgroja imgrubia";
+}
+
+#cervezas {
+  font-size: 60px;
+  text-align: center;
+  color: black;
+  padding: 80px;
+  margin: 0;
+  width: 1fr;
+  height: 1fr;
 }
 
 .container {
-  margin-top: 30px;
-}
-
-.logo {
-  margin-top: 30px;
+  padding: 40px;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

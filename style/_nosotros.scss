@@ -1,0 +1,20 @@
+.history{
+    font-size: 50px;
+    text-align: center;
+    margin: 40px;
+    color: rgb(0, 0, 0);
+    }
+    .historia-andes{
+        font-size: 35px;
+    }
+
+    #grilla{
+        display: grid;
+        justify-items: center;
+        gap: 40px;
+        grid-template-columns:  1fr 1fr;
+        grid-template-rows:  1fr 1fr 1fr;
+        grid-template-areas: "andes cerveceria historia-andes"
+                             "hotel andes historia-andes"                        
+       }
+ 

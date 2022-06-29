@@ -1,4 +1,7 @@
-
+*{
+    padding: 0%;
+    margin: 0%;
+}
 html{
     font-size: 62.5%;
 }
@@ -7,7 +10,7 @@ body{
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 30fr auto; 
+    grid-template-rows: 1fr 10fr 2fr; 
     grid-template-areas: "header"
                           "main"
                           "footer";
@@ -22,21 +25,26 @@ main{
     flex-wrap: wrap;
     flex-direction: column;
  }
-h1{
+ #etiqueta{
     font-size: 60px;
     color: rgb(0, 0, 0);
     padding: 80px;
-    margin: 80px 40px 80px 40px;
+    margin: 40px;
+    padding: 40px;
+    width: 1fr;
+    height: 1fr ;
     border: solid black;
     background-color: rgb(107, 71, 71);
+}
+figure{
+    margin: 40px;
 }
 #galeria{
  display: grid;
  grid-template-columns:  1fr 1fr  ;
  grid-template-rows:  1fr 1fr 1fr;
  grid-template-areas: "img1 img2"
-                      "img3 img4"
-                                        
+                      "img3 img4"            
 }
 #galeria img{
     width:  70%;
@@ -48,16 +56,19 @@ h1{
     font-size: 15px;
     margin-top: 50px;
 }
-h2{
-    margin-top: 900px ;
-    text-align: center;
-    font-size: 40px;
-}
+
 figcaption{
     margin-top: 1000px;
     font-size: 100px;
 }
-
+footer{
+    grid-area: footer;
+    width: 100%;
+    background-color: $color; 
+  }
+  .logo {
+    margin-top: 30px;
+    }
 #redes{
     font-size: 30px;
 }
@@ -72,7 +83,7 @@ figcaption{
     
 }
 /*mobile*/
-@media screen and  (max-width: 500px){
+@media screen and (max-width: 500px){
     #galeria {
         grid-template-columns:  1fr  ;
         grid-template-rows:  1fr 1fr 1fr 1fr 1fr;
@@ -81,7 +92,4 @@ figcaption{
                              "img3" 
                              "img4"                  
        }
-}
-.slide{
-    margin-top: 10px;
 }

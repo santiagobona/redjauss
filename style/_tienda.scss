@@ -1,0 +1,24 @@
+.entry-tittle{
+    font-size: 50px;
+    text-align: center;
+    margin: 40px;
+    color: rgb(0, 0, 0);
+}
+#card{
+ display: grid;
+ justify-items: center;
+ gap: 40px;
+ grid-template-columns:  1fr 1fr  ;
+ grid-template-rows:  1fr 1fr 1fr;
+ grid-template-areas: "ipa negra"
+                      "roja rubia"                        
+}
+.card{
+    background-color: $color;
+    border-radius: 0.3rem;
+}
+.btn-primary{
+    color: $black-color;
+    background-color: #068822;
+    border-color: $black-color;
+}
